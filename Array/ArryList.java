@@ -30,7 +30,16 @@ public class ArryList {
         myList1.set(2, 49); // changing the value at inde 2 and changed value is 49
         System.out.println(myList1);
         myList.remove(2); // removing the value at index 2
-        System.out.println(myList);
+
+
+        // printing using for loops
+
+        for (int i = 0; i <5; i++) {
+            System.out.print(myList.get(i)+",");
+        }
+
+        System.out.println();
+        
         System.out.println(myList1.contains(9)); //checking if yes then  it will return true
     }
 
