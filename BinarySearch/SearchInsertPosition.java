@@ -1,6 +1,6 @@
 public class SearchInsertPosition {
     public static void main(String[] args){
-        int[] arr = {1, 2, 4, 5, 7, 9, 13, 15, 16, 21, 24, 25, 36};
+        int[] arr = {16, 21, 24, 25, 36, 1, 2, 4, 5, 7, 9, 13, 15};
         int target = 12;
         System.out.println(lowerBound(arr,target));
     }
