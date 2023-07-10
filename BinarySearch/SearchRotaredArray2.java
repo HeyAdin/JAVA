@@ -1,7 +1,7 @@
 public class SearchRotaredArray2 {
     public static void main(String[] args) {
-        int[] arr = {9, 12, 13, 13, 0, 2, 3, 3, 3, 7, 9};
-        int target = 0; //returning false changing conditions
+        int[] arr = {0,13};
+        int target =13; 
         System.out.println(search(arr,target));
     }
 
@@ -13,22 +13,28 @@ public class SearchRotaredArray2 {
             if(nums[mid]==target){
                 return true;
             }
-            else if(nums[low]>nums[mid]){
-                if(target>=nums[low] && target>nums[mid]){
-                    high = mid-1;
+            if(nums[mid]==nums[high] && nums[mid]==nums[low]){
+                low =(low+1)%nums.length;
+                high = high-1;
+            }
+            if(nums[mid] >=nums[low]){
+                if(target>= nums[low] && target<nums[mid]){
+                    high = mid -1;
                 }
                 else{
                     low = mid+1;
                 }
             }
-            else if(nums[mid]>= nums[low]){
-                if(target>=nums[low] && target<nums[mid]){
-                    high = mid-1;
+
+            else if(nums[mid]<=nums[low]){
+                if(target> nums[mid] && target<=nums[high]){
+                    low = mid +1;
                 }
                 else{
-                    low = mid+1;
+                    high = mid-1;
                 }
             }
+            
         }
         return false;
     }
