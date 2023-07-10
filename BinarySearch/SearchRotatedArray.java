@@ -1,7 +1,7 @@
 public class SearchRotatedArray {
     public static void main(String[] args) {
-        int[] arr = {1,3};
-        int target=3;
+        int[] arr = {3,1};
+        int target=1;
         System.out.println(search(arr, target));
     }
 
